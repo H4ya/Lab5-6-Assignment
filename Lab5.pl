@@ -12,27 +12,6 @@ male(herb)
 male(homer)
 male(bart)
 
-
-
-
-\\father(abraham, herb)
-\\father(abraham, homer)
-\\father(clancy, marge)
-\\father(clancy, patty)
-\\father(clancy, semla)
-\\father(homer, bart)
-\\father(homer, lisa)
-\\father(homer, maggie)
-\\mother(mona, herb)
-\\mother(mona, homer)
-\\mother(jackie, marge)
-\\mother(jackie, patty)
-\\mother(jackie, selma)
-\\mother(marge,bart)
-\\mother(marge, lisa)
-\\mother(marge, maggie)
-\\mother(selma, ling)
-
 parent(abraham, herb)
 parent(abraham, homer)
 parent(clancy, marge)
