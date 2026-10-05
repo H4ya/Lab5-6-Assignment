@@ -1,35 +1,32 @@
-female(mona)
-female(jackie)
-female(marge)
-female(selma)
-female(patty)
-female(lisa)
-female(maggie)
-female(ling)
-male(abraham)
-male(clancy)
-male(herb)
-male(homer)
-male(bart)
-
-parent(abraham, herb)
-parent(abraham, homer)
-parent(clancy, marge)
-parent(clancy, patty)
-parent(clancy, semla)
-parent(homer, bart)
-parent(homer, lisa)
-parent(homer, maggie)
-
-parent(mona, herb)
-parent(mona, homer)
-parent(jackie, marge)
-parent(jackie, patty)
-parent(jackie, selma)
-parent(marge,bart)
-parent(marge, lisa)
-parent(marge, maggie)
-parent(selma, ling)
+female(mona).
+female(jackie).
+female(marge).
+female(selma).
+female(patty).
+female(lisa).
+female(maggie).
+female(ling).
+male(abraham).
+male(clancy).
+male(herb).
+male(homer).
+male(bart).
+parent(abraham, herb).
+parent(abraham, homer).
+parent(clancy, marge).
+parent(clancy, patty).
+parent(clancy, selma).
+parent(homer, bart).
+parent(homer, lisa).
+parent(homer, maggie).
+parent(mona, homer).
+parent(jackie, marge).
+parent(jackie, patty).
+parent(jackie, selma).
+parent(marge,bart).
+parent(marge, lisa).
+parent(marge, maggie).
+parent(selma, ling).
 
 
 mother(X,Y) :- female(X), parent(X,Y).
@@ -49,7 +46,7 @@ grandfather(X,Z) :- male(X), parent(X,Y), parent(Y,Z).
 aunt(X,Y) :- parent(P,Y), sister(X,P).
 uncle(X,Y) :- parent(P,Y), brother(X,P).
 
-cousin(X,Y):- Parent(P1,X), Parent(P2,Y), sibling(P1,P2).
+cousin(X,Y):- parent(P1,X), parent(P2,Y), sibling(P1,P2),X \= Y.
 
 ancestor(X,Z) :- parent(X,Z).
 
